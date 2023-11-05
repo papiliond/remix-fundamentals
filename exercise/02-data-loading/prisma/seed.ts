@@ -23,6 +23,20 @@ async function seed() {
     },
   });
 
+  await prisma.post.create({
+    data: {
+      slug: "my-first-post",
+      title: "My First Post",
+    },
+  });
+
+  await prisma.post.create({
+    data: {
+      slug: "90s-mixtape",
+      title: "A Mixtape I Made Just For You",
+    },
+  });
+
   console.log(`Database has been seeded. 🌱`);
 }
 
